@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADMIN DASHBOARD</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
+        <div class="container-fluid">
+            <header class="row nav-header clearfix">
+                <div class="col-md-4 col-sm-7">
+                    <h1 class="company-name">SAMPLE APPLICATION</h1>
+                </div>
+                <div class="col-md-3 col-sm-6 search-bar">
+                    <input type="text" placeholder="search for.." class="form-control search" />
+                    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-5 notification">
+                    <ul class="pull-right list-inline">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span class="label label-message">4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-bell" aria-hidden="true"></i>
+                                <span class="label label-warning">5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <!--SIDE MENU-->
+            <div class="row">
+                <div class="main-navigation">
+                    <div class="nav-side-menu">
+                        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+                        <div class="menu-list">
+                            <h1>Main-Navigation</h1>
+                            <ul id="menu-content" class="menu-content collapse out">
+                                <li data-toggle="collapse" data-target="#dashboard" class="collapsed">
+                                    <a href="#">
+                                        <i class="fa fa-home" aria-hidden="true"></i>  Dashboard
+                                        <span class="arrow"></span>
+                                    </a>
+                                    <ul class="sub-menu collapse" id="dashboard">
+                                        <li>Menu Option 1</li>
+                                        <li>Menu Option 2</li>
+                                    </ul>
+                                </li>
+                                <li><a href=""><i class="fa fa-diamond" aria-hidden="true"></i> Widgets</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Main-content -->
+            <div class="main-page">
+                <div class="main-page-header">
+                    <h3>Dashboard</h3>
+                </div>
+                <div class="main-page-content">
+                    <div class="row statistics">
+                        <div class="col-sm-6 col-md-3">
+                           <div class="box clearfix uploads">
+                                <div class="pull-left icon">
+                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                </div>
+                                <div class="value">
+                                    <h3>2300</h3>
+                                    <p>Uploads</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                           <div class="box clearfix items">
+                                <div class="pull-left icon">
+                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                </div>
+                                <div class="value">
+                                    <h3>573</h3>
+                                    <p>items</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                           <div class="box clearfix users">
+                                <div class="pull-left icon">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                </div>
+                                <div class="value">
+                                    <h3>789</h3>
+                                    <p>users</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                           <div class="box clearfix downloads">
+                                <div class="pull-left icon">
+                                    <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                                </div>
+                                <div class="value">
+                                    <h3>345</h3>
+                                    <p>downloads</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--graph-->
+                    <div class="graph-outer">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="graph page-visitors">
+                                    <h4>Page Visitors <span>Last Week</span></h4>
+                                    <canvas id="bar-graph"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="graph analytics">
+                                    <h4>Analytics</h4>
+                                    <canvas id="line-graph"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+      
+      <!--javascript files-->>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="js/graph/Chart.bundle.js"></script>
+        <script src="js/graph/utils.js"></script>
+        <script src="js/graph/script.js"></script>
+
+  </body>
+</html>
